@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_getx/pages/counter_app.dart';
+import 'package:flutter_learn_getx/pages/counter_app_setstate.dart';
+import 'package:flutter_learn_getx/pages/realtime_input_app.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,15 +18,21 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         children: [
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => const CounterApp());
+            },
             child: const Text('Counter App'),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => const CounterAppSetState());
+            },
             child: const Text('Counter App SetState'),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => const RealtimeInputApp());
+            },
             child: const Text('Realtime Input App'),
           ),
           ElevatedButton(
